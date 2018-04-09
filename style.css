@@ -14,7 +14,6 @@ header{
   max-width: 1400px;
   height: 900px;
   margin: -110px auto 100px;
-  background-color: white;
   border-radius: 5;
 }
 
@@ -37,9 +36,13 @@ header{
 #friend-bar{
   width: 70%;
 }
-
+#menu::after{
+  content: "";
+  display: table;
+  clear: both;
+}
 /* IMPOSTAZIONE PER LE FOTO E LE ICONE PER LA NAV */
-#personal-bar img, #friend-bar img{
+.round-pic{
   border-radius: 50px;
   width: 40px;
   margin-left: 20px;
@@ -63,4 +66,40 @@ header{
   justify-self: flex-start;
   margin-left: 20px;
   font-family: 'Roboto', sans-serif;
+}
+
+/* PARTE CENTRALE DELLA FINESTRA */
+#conv-list, #conversation{
+  float: left;
+}
+#conv-list{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#conversation{
+  width: 70%;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+}
+
+/* LISTA CONVERSAZIONI */
+#conv-list .list-conv.notify{
+  background-color: #9DE1FE;
+  padding: 20px 0;
+}
+#conv-list .list-conv.notify .fa-bell-slash{
+  background-color: white;
+  color: #9DE1FE;
+  margin-left: 20px;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 18px;
+}
+#conv-list .list-conv{
+  padding: 10px 0;
+  background-color: white;
+  border-bottom: 1px solid #F2F2F2;
+}
+#conv-list .list-conv img{
+  width: 50px;
 }
