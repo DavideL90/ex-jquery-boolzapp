@@ -38,18 +38,29 @@ header{
   width: 70%;
 }
 
-/* PARTE SINISTRA DELLA BARRA */
-#personal-bar img{
+/* IMPOSTAZIONE PER LE FOTO E LE ICONE PER LA NAV */
+#personal-bar img, #friend-bar img{
   border-radius: 50px;
   width: 40px;
-  margin-left: 5%;
+  margin-left: 20px;
 }
-#personal-bar #icons-menu{
-  color: #727A7E;
-  margin-right: 5%;
+#icons-menu{
+  color: #8B9194;
+  margin-right: 20px;
   display: flex;
-  width: 35%;
+  width: 150px;
   justify-content: space-around;
   font-size: 18px;
 }
 /* PARTE DESTRA DELLA BARRA */
+#friend-bar #left-cnt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#friend-bar #contact-name{
+  justify-self: flex-start;
+  margin-left: 20px;
+  font-family: 'Roboto', sans-serif;
+}
