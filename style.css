@@ -15,4 +15,41 @@ header{
   height: 900px;
   margin: -110px auto 100px;
   background-color: white;
+  border-radius: 5;
 }
+
+/* BARRA SUPERIORE */
+#menu{
+  height: 65px;
+  background-color: #EEE;
+}
+#menu > *{
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+#personal-bar{
+  width: 30%;
+  border-right: 1px solid lightgrey;
+}
+#friend-bar{
+  width: 70%;
+}
+
+/* PARTE SINISTRA DELLA BARRA */
+#personal-bar img{
+  border-radius: 50px;
+  width: 40px;
+  margin-left: 5%;
+}
+#personal-bar #icons-menu{
+  color: #727A7E;
+  margin-right: 5%;
+  display: flex;
+  width: 35%;
+  justify-content: space-around;
+  font-size: 18px;
+}
+/* PARTE DESTRA DELLA BARRA */
