@@ -84,7 +84,6 @@ header{
 
 /* LISTA CONVERSAZIONI */
 #conv-list .list-conv{
-  padding: 20px 0;
   height: 80px;
   background-color: white;
   display: flex;
@@ -101,6 +100,7 @@ header{
 #conv-list .list-conv.notify .description{
   border-bottom: none;
   padding-bottom: 0;
+  padding-top: 0;
 }
 #conv-list .list-conv.notify .fa-bell-slash{
   background-color: white;
@@ -116,9 +116,20 @@ header{
   font-size: 16px;
   border-bottom: 1px solid #F2F2F2;
   width: 100%;
+  height: 100%;
+  padding-top: 20px;
 }
-#conv-list .list-conv .description{
-  padding-bottom: 20px;
+#conv-list .list-conv:hover{
+  background-color: #eee;
+}
+.list-conv .description .friend-name{
+  display: flex;
+  justify-content: space-between;
+}
+.description .friend-name #when-msg{
+  font-size: 12px;
+  padding-right: 10px;
+  color: #A4A4A4;
 }
 .underlined{
   text-decoration: underline;
@@ -166,6 +177,70 @@ header{
 #conversation{
   position: relative;
 }
+#conversation #messages{
+  height: 100%;
+  padding: 0 50px;
+  overflow: auto;
+}
+#conversation #messages .mess{
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+#conversation #messages .checkHour-msg{
+  text-align: right;
+  font-size: 12px;
+  color: #B1B1B1;
+  padding-top: 5px;
+}
+#messages .checkHour-msg .dblCheck{
+  color: #4FC3F7;
+  padding-left: 5px;
+}
+#messages .mess.sent{
+  background-color: #DCF8C6;
+  max-width: 550px;
+  float: right;
+  position: relative;
+}
+#messages .mess.received{
+  background-color: white;
+  max-width: 550px;
+  float: left;
+  position: relative;
+}
+#messages .mess.received .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 10px solid white;
+  position: absolute;
+  top: 0;
+  left: -8px;
+}
+#messages .mess.sent .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 10px solid #DCF8C6;
+  position: absolute;
+  top: 0;
+  right: -8px;
+}
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* PARTE BARRA PER SCRIVERE */
 #conversation #writebar{
   position: absolute;
   width: 100%;
