@@ -33,25 +33,33 @@ $(document).ready(function(){
   //Quando scrivo sulla barra viene filtrata la lista
   $('#inputSearch').keyup(function(){
     var input = $('#inputSearch').val();
-    console.log(input);
-    filterFriends(input);
-
-    // $('#inputSearch').val("");
+    var isFound = false;
+    if(input == ""){
+      $('.list-conv').show();
+      isFound = true;
+    }
+    else{
+      $('.list-conv').show();
+      isFound = filterFriends(input, isFound);
+    }
+    if(!isFound){
+      $('#notFound-mgs').show();
+    }
+    else{
+      $('#notFound-mgs').hide();
+    }
   });
 });
 
-function filterFriends(letter){
+function filterFriends(letter, findElement){
   $('.friend-name').each(function(i){
-    if(letter == ""){
-      $('.list-conv').show();
+    var name = $(this).children('#name').html();
+    if(!name.toLowerCase().includes(letter.toLowerCase())){
+      $(this).parents('.list-conv').hide();
     }
     else{
-      var name = $(this).children('#name').html();
-      var arrayName = name.split();
-      console.log(name);
-      if(!name.toLowerCase().includes(letter.toLowerCase())){
-        $(this).parents('.list-conv').hide();
-      }
+      findElement = true;
     }
   });
+  return findElement;
 }

@@ -123,6 +123,13 @@ header{
   height: 100%;
   padding-top: 20px;
 }
+#conv-list #notFound-mgs{
+  display: none;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+  color: #929fa6;
+}
 #conv-list .list-conv:hover:not(.notify){
   background-color: #eee;
 }
