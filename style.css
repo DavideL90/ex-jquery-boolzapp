@@ -227,7 +227,6 @@ header{
   font-size: 14px;
   position: relative;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
 }
 .conversation .messages .checkHour-msg{
   position: absolute;
@@ -282,9 +281,10 @@ header{
 
   border-top: 8px solid lightgrey;
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 5px;
   display: none;
+  cursor: pointer;
 }
 .colorWhite{
   background-color: white;
@@ -295,7 +295,15 @@ header{
 
 .messages .mess .arrDown .menu{
   display: none;
-  pos
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid black;
+}
+.mess .arrDown .menu a{
+  text-decoration: none;
 }
 .row:after{
   content: "";

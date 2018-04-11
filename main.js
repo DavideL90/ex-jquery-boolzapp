@@ -69,7 +69,14 @@ $(document).ready(function(){
   });
   //Quando clicco sulla freccina si apre il menù a tendina
   $('.arrDown').click(function(){
-
+    $(this).children('.menu').slideDown();
+  });
+  $('.arrDown').mouseleave(function(){
+    $(this).children('.menu').hide();
+  });
+  //Quando clicco su Elimina cancello quel messaggio
+  $('.cancel').click(function(){
+    $(this).parents('.row').remove();
   });
 });
 
