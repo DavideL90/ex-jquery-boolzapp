@@ -6,6 +6,8 @@
 }
 body{
   background-color: #DBDBD4;
+  overflow: hidden;
+  height: 100vh;
 }
 header{
   height: 130px;
@@ -13,9 +15,10 @@ header{
 }
 #central-window{
   max-width: 1400px;
-  height: 750px;
-  margin: -110px auto 100px;
+  height: 88%;
+  margin: -110px auto 50px;
   border-radius: 5;
+  z-index: 1;
 }
 #central-window::after{
   content: "";
@@ -73,7 +76,7 @@ header{
 }
 
 /* PARTE CENTRALE DELLA FINESTRA */
-#conv-list, #conversation{
+#conv-list, .conversation{
   float: left;
   height: 100%;
 }
@@ -81,9 +84,10 @@ header{
   width: 30%;
   overflow-y: auto;
 }
-#conversation{
+.conversation{
   width: 70%;
   background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  display: none;
 }
 
 /* LISTA CONVERSAZIONI */
@@ -92,6 +96,9 @@ header{
   background-color: white;
   display: flex;
   align-items: center;
+}
+#conv-list .conv-clicked{
+  background-color: #E9EBEB;
 }
 #conv-list .list-conv img{
   width: 50px;
@@ -183,18 +190,20 @@ header{
   outline: none;
   width: 100%;
 }
-#whitebackgr{
+.whitebackgr{
   height: 100%;
   background-color: white;
 }
 
 /* PARTE CONVERSAZIONI */
-#conversation #messages{
+.conversation .messages{
   height: 92%;
   padding: 0 50px;
   overflow: auto;
+  display: none;
 }
-#conversation #messages .mess{
+.conversation .messages .mess{
+  min-width: 110px;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -202,29 +211,30 @@ header{
   position: relative;
   font-family: 'Open Sans', sans-serif;
 }
-#conversation #messages .checkHour-msg{
-  text-align: right;
+.conversation .messages .checkHour-msg{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
   font-size: 12px;
   color: #B1B1B1;
-  padding-top: 5px;
 }
-#messages .checkHour-msg .dblCheck{
+/* #messages .checkHour-msg .dblCheck{
   color: #4FC3F7;
   padding-left: 5px;
-}
-#messages .mess.sent{
+} */
+.messages .mess.sent{
   background-color: #DCF8C6;
   max-width: 550px;
   float: right;
   position: relative;
 }
-#messages .mess.received{
+.messages .mess.received{
   background-color: white;
   max-width: 550px;
   float: left;
   position: relative;
 }
-#messages .mess.received .arrow-down {
+.messages .mess.received .arrow-down {
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -235,7 +245,7 @@ header{
   top: 0;
   left: -8px;
 }
-#messages .mess.sent .arrow-down {
+.messages .mess.sent .arrow-down {
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -253,7 +263,7 @@ header{
 }
 
 /* PARTE BARRA PER SCRIVERE */
-#conversation #writebar{
+.conversation #writebar{
   width: 100%;
   height: 8%;
   display: flex;
@@ -261,18 +271,18 @@ header{
   justify-content: space-evenly;
   background-color: #F5F1EE;
 }
-#conversation #writebar .fa-smile, #conversation #writebar .fa-microphone{
+.conversation #writebar .fa-smile, .conversation #writebar .fa-microphone{
   color:#989B9D;
   font-size: 20px;
   cursor: pointer;
 }
-#conversation #writebar .fa-paper-plane{
+.conversation #writebar .fa-paper-plane{
   color:#989B9D;
   font-size: 20px;
   display: none;
   cursor: pointer;
 }
-#conversation #writebar input{
+.conversation #writebar input{
   border: none;
   border-radius: 5px;
   outline: none;
@@ -280,6 +290,6 @@ header{
   height: 40px;
   padding: 5px 10px;
 }
-#conversation #writebar input:placeholder{
+.conversation #writebar input:placeholder{
   color: #C5C5C5;
 }
