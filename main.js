@@ -12,6 +12,7 @@ $(document).ready(function(){
       $('.fa-paper-plane').hide();
     }
   });
+
   //Se viene premuto enter allora mando un messaggio
   $('#msg-input').keypress(function(e){
     if(e.which === 13){
@@ -20,12 +21,14 @@ $(document).ready(function(){
       automaticAnswer(convNum);
     }
   });
+
   //Quando clicco sull'areoplano viene invitato un messaggio
   $('.fa-paper-plane').click(function(){
     var input = $('#msg-input').val();
     sendMessage(input, convNum);
     automaticAnswer(convNum);
   });
+
   //Quando scrivo sulla barra viene filtrata la lista
   $('#inputSearch').keyup(function(){
     var input = $('#inputSearch').val();
@@ -58,7 +61,20 @@ $(document).ready(function(){
     convNum = $(this).attr('id');
     selectFriend(actualConv, convNum);
   });
+
+  //Quando passo su un messaggio compare la freccia e posso accedere al menu
+  //Se esco dal messaggio col mouse la freccia scompare
+  $('.mess').on("mouseenter mouseleave", function(){
+      $(this).children('.arrDown').toggle();
+  });
+  //Quando clicco sulla freccina si apre il menù a tendina
+  $('.arrDown').click(function(){
+
+  });
 });
+
+
+
 
 function filterFriends(letter, findElement){
   $('.friend-name').each(function(i){
