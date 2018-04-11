@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  //variabile per salvarmi il nome dell'id del contatto selezionato
+  var convNum = "";
   //Quando premo un pulsante il microfono sparisce
   //e compare l'areoplano
   $('#msg-input').keyup(function(){
@@ -14,15 +16,15 @@ $(document).ready(function(){
   $('#msg-input').keypress(function(e){
     if(e.which === 13){
       var input = $('#msg-input').val();
-      sendMessage(input);
-      automaticAnswer();
+      sendMessage(input, convNum);
+      automaticAnswer(convNum);
     }
   });
   //Quando clicco sull'areoplano viene invitato un messaggio
   $('.fa-paper-plane').click(function(){
     var input = $('#msg-input').val();
-    sendMessage(input);
-    automaticAnswer();
+    sendMessage(input, convNum);
+    automaticAnswer(convNum);
   });
   //Quando scrivo sulla barra viene filtrata la lista
   $('#inputSearch').keyup(function(){
@@ -48,13 +50,14 @@ $(document).ready(function(){
     }
   });
   //Seleziono la conversazione dalla lista
+
   $('.list-conv').click(function(){
     //nascondo le conversazioni e rimuovo il background ogni volta
     // perché si accumulerebbero tra di loro
     $('.messages').hide();
-    $(this).removeClass('conv-clicked');
+    $('.list-conv').removeClass('conv-clicked');
     //assengo l'id del contatto ad una vriabile
-    var convNum = $(this).attr('id');
+    convNum = $(this).attr('id');
     //assegno all'elemento cliccato una classe per mettergli un backgr
     $(this).addClass('conv-clicked');
     //faccio comparire lo sfondo della conversazione
@@ -78,8 +81,8 @@ function filterFriends(letter, findElement){
   });
   return findElement;
 }
-// Funzzione per inviare un messaggio
-function sendMessage(msgWritten){
+// Funzione per inviare un messaggio
+function sendMessage(msgWritten, numConv){
   $('#msg-input').val("");
   //creo variabile per l'ora da inserire
   var hour = new Date()
@@ -94,18 +97,18 @@ function sendMessage(msgWritten){
   // var check = $('<div class="dblCheck">' + dblCheck + '</div>');
   var arrow = $('<div class="arrow-down">' + '</div>');
   //assegno a messages la row, il div l'ora e la freccina
-  $('#messages').append(row.append(lastDiv.append(msgHour).append(arrow)));
+  $('.' + numConv).append(row.append(lastDiv.append(msgHour).append(arrow)));
   $('.fa-microphone').show();
   $('.fa-paper-plane').hide();
 }
 //mando un messaggio di risposta automatico dopo un secondo
-function automaticAnswer(){
+function automaticAnswer(numConv){
   setTimeout(function(){
     var hour = new Date()
     var row = $('<div class="row">' + '</div>');
     var lastDiv = $('<div class="mess received"> Ok </div>');
     var msgHour = $('<div class="checkHour-msg">'+ hour.getHours() + ':' + hour.getMinutes() + '</div>');
     var arrow = $('<div>' + '</div>').addClass('arrow-down');
-    $('#messages').append(row.append(lastDiv.append(msgHour).append(arrow)));
+    $('.' + numConv).append(row.append(lastDiv.append(msgHour).append(arrow)));
   }, 1000);
 }

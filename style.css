@@ -203,13 +203,14 @@ header{
   display: none;
 }
 .conversation .messages .mess{
-  min-width: 110px;
+  min-width: 200px;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   font-size: 14px;
   position: relative;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 .conversation .messages .checkHour-msg{
   position: absolute;
