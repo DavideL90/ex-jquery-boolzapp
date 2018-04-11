@@ -196,6 +196,23 @@ header{
 }
 
 /* PARTE CONVERSAZIONI */
+#bigPic{
+  background-color: #F7F9FA;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#bigPic img{
+  border-radius: 50%;
+}
+#bigPic h2{
+  color: #4b5961;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 30px;
+}
 .conversation .messages{
   height: 92%;
   padding: 0 50px;

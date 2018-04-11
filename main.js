@@ -49,23 +49,14 @@ $(document).ready(function(){
       $('#notFound-mgs').show();
     }
   });
-  //Seleziono la conversazione dalla lista
 
+  //Seleziono la conversazione dalla lista
   $('.list-conv').click(function(){
-    //nascondo le conversazioni e rimuovo il background ogni volta
-    // perché si accumulerebbero tra di loro
-    $('.messages').hide();
-    $('.list-conv').removeClass('conv-clicked');
+    //prendo l'attuale conversazione
+    var actualConv = $(this);
     //assengo l'id del contatto ad una vriabile
     convNum = $(this).attr('id');
-    //assegno all'elemento cliccato una classe per mettergli un backgr
-    $(this).addClass('conv-clicked');
-    //faccio comparire lo sfondo della conversazione
-    $('.conversation').show();
-    //controllo se esiste la conversazione per quel contatto
-    if($('.messages').hasClass(convNum)){
-      $('.' + convNum).show();
-    }
+    selectFriend(actualConv, convNum);
   });
 });
 
@@ -105,10 +96,31 @@ function sendMessage(msgWritten, numConv){
 function automaticAnswer(numConv){
   setTimeout(function(){
     var hour = new Date()
+    var minute = hour.getMinutes();
+    if(minute < 10){
+      minute = '0' + minute;
+    }
     var row = $('<div class="row">' + '</div>');
     var lastDiv = $('<div class="mess received"> Ok </div>');
-    var msgHour = $('<div class="checkHour-msg">'+ hour.getHours() + ':' + hour.getMinutes() + '</div>');
+    var msgHour = $('<div class="checkHour-msg">'+ hour.getHours() + ':' + minute + '</div>');
     var arrow = $('<div>' + '</div>').addClass('arrow-down');
     $('.' + numConv).append(row.append(lastDiv.append(msgHour).append(arrow)));
   }, 1000);
+}
+//funzione per selezionare persona cliccata
+function selectFriend(conversation, numConv){
+  //Nascondo la schermata iniziale
+  $('#bigPic').hide();
+  //nascondo le conversazioni e rimuovo il background ogni volta
+  // perché si accumulerebbero tra di loro
+  $('.messages').hide();
+  $('.list-conv').removeClass('conv-clicked');
+  //assegno all'elemento cliccato una classe per mettergli un backgr
+  $(conversation).addClass('conv-clicked');
+  //faccio comparire lo sfondo della conversazione
+  $('.conversation').show();
+  //controllo se esiste la conversazione per quel contatto
+  if($('.messages').hasClass(numConv)){
+    $('.' + numConv).show();
+  }
 }
