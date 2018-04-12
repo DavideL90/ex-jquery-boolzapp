@@ -95,6 +95,7 @@ function filterFriends(letter){
 }
 // Funzione per inviare un messaggio
 function sendMessage(msgWritten, numConv){
+   var converseNow = $('.' + numConv);
    $('#msg-input').val("");
    //creo variabile per l'ora da inserire
    var hour = new Date()
@@ -119,9 +120,11 @@ function sendMessage(msgWritten, numConv){
    $('.' + numConv).append(row.append(lastDiv.append(msgHour).append(hiddenMenu).append(arrow)));
    $('.fa-microphone').show();
    $('.fa-paper-plane').hide();
+   converseNow.scrollTop(converseNow[0].scrollHeight);
 }
 //mando un messaggio di risposta automatico dopo un secondo
 function automaticAnswer(numConv){
+   var converseNow = $('.' + numConv);
    setTimeout(function(){
       var hour = new Date()
       var minute = hour.getMinutes();
@@ -140,7 +143,9 @@ function automaticAnswer(numConv){
       )
       var arrow = $('<div>' + '</div>').addClass('arrow-down');
       $('.' + numConv).append(row.append(lastDiv.append(msgHour).append(hiddenMenu).append(arrow)));
+      converseNow.scrollTop(converseNow[0].scrollHeight);
    }, 1000);
+
 }
 //funzione per selezionare persona cliccata
 function selectFriend(conversation, numConv){
@@ -158,7 +163,10 @@ function selectFriend(conversation, numConv){
    //controllo se esiste la conversazione per quel contatto
    if(converseNow.hasClass(numConv)){
       converseNow.show();
-      converseNow.scrollTop(converseNow.scrollHeight);
+      console.log(converseNow.scrollTop());
+      console.log(converseNow.scrollHeight);
+      //inserisco lo scroll automatico alla fine della pagina
+      converseNow.scrollTop(converseNow[0].scrollHeight);
    }
 
 }
