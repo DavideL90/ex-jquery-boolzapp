@@ -1,1128 +1,1127 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Boolzapp web</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <header></header>
-    <div id="central-window">
+<head>
+   <meta charset="utf-8">
+   <title>Boolzapp web</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+   <header></header>
+   <div id="central-window">
       <nav id="menu">
-        <div id="personal-bar">
-          <img class="round-pic" src="img/profile.jpg">
-          <div id="icons-menu">
-            <i class="fas fa-circle-notch"></i>
-            <i class="fas fa-comment-alt"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
-        <div id="friend-bar">
-          <div id="left-cnt">
+         <div id="personal-bar">
             <img class="round-pic" src="img/profile.jpg">
-            <div id="contact-name">
-              Contact's name
+            <div id="icons-menu">
+               <i class="fas fa-circle-notch"></i>
+               <i class="fas fa-comment-alt"></i>
+               <i class="fas fa-ellipsis-v"></i>
             </div>
-          </div>
-          <div id="icons-menu">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
+         </div>
+         <div id="friend-bar">
+            <div class="greybackgr"></div>
+               <div id="left-cnt" class="invisible">
+                  <img class="round-pic" src="">
+                  <div id="contact-name"></div>
+               </div>
+               <div id="icons-menu" class="invisible">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-paperclip"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+               </div>
+         </div>
       </nav>
       <!-- BARRA LATERALE -->
       <div id="conv-list">
-        <div class="whitebackgr">
-          <!-- CASELLA BLU NOTIFICHE -->
-          <div class="list-conv notify">
-            <i class="fas fa-bell-slash"></i>
-            <div class="description">
-              Get notified of new messages
-              <div class="txt-spec underlined">
-                Turn on desktop notifications
-              </div>
+         <div class="whitebackgr">
+            <!-- CASELLA BLU NOTIFICHE -->
+            <div class="list-conv notify">
+               <i class="fas fa-bell-slash"></i>
+               <div class="description">
+                  Get notified of new messages
+                  <div class="txt-spec underlined">
+                     Turn on desktop notifications
+                  </div>
+               </div>
             </div>
-          </div>
-          <!-- BARRA DI RICERCA -->
-          <div id="search-bar">
-            <div>
-              <button id="srcButton" type="button"><i class="fas fa-search"></i></button>
-              <input id="inputSearch" type="text" placeholder="Search or start new chat">
+            <!-- BARRA DI RICERCA -->
+            <div id="search-bar">
+               <div>
+                  <button id="srcButton" type="button"><i class="fas fa-search"></i></button>
+                  <input id="inputSearch" type="text" placeholder="Search or start new chat">
+               </div>
             </div>
-          </div>
-          <!-- MOSTRA SE NON TROVO CONTATTI -->
-          <div id="notFound-mgs">
-            No contact found
-          </div>
-          <!-- ELENCO CONVERSAZIONI -->
-          <div id="conv1" class="list-conv">
-            <img class="round-pic" src="img/friend1.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Valeria</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <!-- MOSTRA SE NON TROVO CONTATTI -->
+            <div id="notFound-mgs">
+               No contact found
             </div>
-          </div>
-          <div id="conv2" class="list-conv">
-            <img class="round-pic" src="img/friend2.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Amici</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <!-- ELENCO CONVERSAZIONI -->
+            <div id="conv1" class="list-conv contacts">
+               <img class="round-pic" src="img/friend1.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Valeria</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv3" class="list-conv">
-            <img class="round-pic" src="img/friend3.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Marco</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv2" class="list-conv contacts">
+               <img class="round-pic" src="img/friend2.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Amici</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv4" class="list-conv">
-            <img class="round-pic" src="img/friend4.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Miky</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv3" class="list-conv contacts">
+               <img class="round-pic" src="img/friend3.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Marco</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv5" class="list-conv">
-            <img class="round-pic" src="img/friend5.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Mirko</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv4" class="list-conv contacts">
+               <img class="round-pic" src="img/friend4.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Miky</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv6" class="list-conv">
-            <img class="round-pic" src="img/friend6.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Veruska</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv5" class="list-conv contacts">
+               <img class="round-pic" src="img/friend5.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Mirko</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv7" class="list-conv">
-            <img class="round-pic" src="img/friend7.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Simona</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv6" class="list-conv contacts">
+               <img class="round-pic" src="img/friend6.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Veruska</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv8" class="list-conv">
-            <img class="round-pic" src="img/friend8.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Marilisa</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv7" class="list-conv contacts">
+               <img class="round-pic" src="img/friend7.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Simona</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-          <div id="conv9" class="list-conv">
-            <img class="round-pic" src="img/friend9.jpg">
-            <div class="description">
-              <div class="friend-name">
-                <span id="name">Madda</span>
-                <span id="when-msg">Friday</span>
-              </div>
-              <div class="txt-spec">
-                ciao!
-              </div>
+            <div id="conv8" class="list-conv contacts">
+               <img class="round-pic" src="img/friend8.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Marilisa</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+            <div id="conv9" class="list-conv contacts">
+               <img class="round-pic" src="img/friend9.jpg">
+               <div class="description">
+                  <div class="friend-name">
+                     <span id="name">Madda</span>
+                     <span id="when-msg">Friday</span>
+                  </div>
+                  <div class="txt-spec">
+                     ciao!
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- FINESTRA CONVERSAZIONE -->
       <div class="whitebackgr">
-        <div id="bigPic">
-          <img src="https://web.whatsapp.com/img/c98cc75f2aa905314d74375a975d2cf2.jpg">
-          <h2>Keep your phone connected</h2>
-        </div>
-        <div class="conversation">
-          <!-- PRIMA CONVERSAZIONE -->
-          <div class="messages conv1">
-            <div class="row">
-              <div class="mess sent">
-                Prima conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+         <div id="bigPic">
+            <img src="https://web.whatsapp.com/img/c98cc75f2aa905314d74375a975d2cf2.jpg">
+            <h2>Keep your phone connected</h2>
+         </div>
+         <div class="conversation">
+            <!-- PRIMA CONVERSAZIONE -->
+            <div class="messages conv1">
+               <div class="row">
+                  <div class="mess sent">
+                     Prima conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- SECONDA CONVERSAZIONE -->
-          <div class="messages conv2">
-            <div class="row">
-              <div class="mess sent">
-                Seconda conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- SECONDA CONVERSAZIONE -->
+            <div class="messages conv2">
+               <div class="row">
+                  <div class="mess sent">
+                     Seconda conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- TERZA CONVERSAZIONE -->
-          <div class="messages conv3">
-            <div class="row">
-              <div class="mess sent">
-                Terza conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- TERZA CONVERSAZIONE -->
+            <div class="messages conv3">
+               <div class="row">
+                  <div class="mess sent">
+                     Terza conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- QUARTA CONVERSAZIONE -->
-          <div class="messages conv4">
-            <div class="row">
-              <div class="mess sent">
-                Quarta conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- QUARTA CONVERSAZIONE -->
+            <div class="messages conv4">
+               <div class="row">
+                  <div class="mess sent">
+                     Quarta conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- QUINTA CONVERSAZIONE -->
-          <div class="messages conv5">
-            <div class="row">
-              <div class="mess sent">
-                Quinta conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- QUINTA CONVERSAZIONE -->
+            <div class="messages conv5">
+               <div class="row">
+                  <div class="mess sent">
+                     Quinta conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- SESTA CONVERSAZIONE -->
-          <div class="messages conv6">
-            <div class="row">
-              <div class="mess sent">
-                Sesta conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- SESTA CONVERSAZIONE -->
+            <div class="messages conv6">
+               <div class="row">
+                  <div class="mess sent">
+                     Sesta conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- SETTIMA CONVERSAZIONE -->
-          <div class="messages conv7">
-            <div class="row">
-              <div class="mess sent">
-                Settima conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- SETTIMA CONVERSAZIONE -->
+            <div class="messages conv7">
+               <div class="row">
+                  <div class="mess sent">
+                     Settima conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- OTTAVA CONVERSAZIONE -->
-          <div class="messages conv8">
-            <div class="row">
-              <div class="mess sent">
-                Ottava conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- OTTAVA CONVERSAZIONE -->
+            <div class="messages conv8">
+               <div class="row">
+                  <div class="mess sent">
+                     Ottava conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- NONA CONVERSAZIONE -->
-          <div class="messages conv9">
-            <div class="row">
-              <div class="mess sent">
-                Nona conversazione
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                <div class="arrDown colorGreen">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+            <!-- NONA CONVERSAZIONE -->
+            <div class="messages conv9">
+               <div class="row">
+                  <div class="mess sent">
+                     Nona conversazione
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                <div class="arrDown colorWhite">
-                  <div class="menu">
-                    <a class="cancel" href="#">Elimina</a>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                <div class="checkHour-msg">
-                  00:00
-                  <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess sent">
-                Andiamo al cinema?
-                <div class="checkHour-msg">
-                00:00
-                <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
-                </div>
-                  <div class="arrDown colorGreen">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess sent">
+                     Andiamo al cinema?
+                     <div class="checkHour-msg">
+                        00:00
+                        <!-- <span class="dblCheck"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> -->
+                     </div>
+                     <div class="arrDown colorGreen">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mess received">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="checkHour-msg">
-                  00:00
-                </div>
-                  <div class="arrDown colorWhite">
-                    <div class="menu">
-                      <a class="cancel" href="#">Elimina</a>
-                    </div>
+               </div>
+               <div class="row">
+                  <div class="mess received">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     <div class="checkHour-msg">
+                        00:00
+                     </div>
+                     <div class="arrDown colorWhite">
+                        <div class="menu">
+                           <a class="cancel" href="#">Elimina</a>
+                        </div>
+                     </div>
+                     <div class="arrow-down"></div>
                   </div>
-                <div class="arrow-down"></div>
-              </div>
+               </div>
             </div>
-          </div>
-          <!-- BARRA PER SCRIVERE -->
-          <div id="writebar">
-            <i class="far fa-smile"></i>
-            <input id="msg-input" type="text" placeholder="Type a message">
-            <i class="fas fa-microphone"></i>
-            <i class="fas fa-paper-plane"></i>
-          </div>
-        </div>
+            <!-- BARRA PER SCRIVERE -->
+            <div id="writebar">
+               <i class="far fa-smile"></i>
+               <input id="msg-input" type="text" placeholder="Type a message">
+               <i class="fas fa-microphone"></i>
+               <i class="fas fa-paper-plane"></i>
+            </div>
+         </div>
       </div>
-    </div>
-  <script src="main.js" charset="utf-8"></script>
-  </body>
+   </div>
+   <script src="main.js" charset="utf-8"></script>
+</body>
 </html>
