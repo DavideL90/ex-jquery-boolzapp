@@ -58,8 +58,9 @@ $(document).ready(function(){
       //Rendo visibile la friendbar
       $('#friend-bar').children('.greybackgr').remove();
       $('#friend-bar').children().removeClass('invisible');
-
+      //faccio lo scroll
       selectFriend(actualConv, convNum);
+      $()
    });
 
    //Quando passo su un messaggio compare la freccia e posso accedere al menu
@@ -143,6 +144,7 @@ function automaticAnswer(numConv){
 }
 //funzione per selezionare persona cliccata
 function selectFriend(conversation, numConv){
+   var converseNow = $('.' + numConv);
    //Nascondo la schermata iniziale
    $('#bigPic').hide();
    //nascondo le conversazioni e rimuovo il background ogni volta
@@ -154,7 +156,9 @@ function selectFriend(conversation, numConv){
    //faccio comparire lo sfondo della conversazione
    $('.conversation').show();
    //controllo se esiste la conversazione per quel contatto
-   if($('.messages').hasClass(numConv)){
-      $('.' + numConv).show();
+   if(converseNow.hasClass(numConv)){
+      converseNow.show();
+      converseNow.scrollTop(converseNow.scrollHeight);
    }
+
 }
