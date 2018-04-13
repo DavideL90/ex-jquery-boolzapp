@@ -90,7 +90,7 @@ header{
 }
 #conv-list{
   width: 30%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 .conversation{
   width: 70%;
@@ -202,7 +202,31 @@ header{
   height: 100%;
   background-color: white;
 }
-
+.flexed{
+   display: flex;
+   flex-direction: column;
+}
+.prova{
+   height: auto;
+}
+.scroll-bar{
+   height: auto;
+   overflow-y: auto;
+}
+.scroll-bar::-webkit-scrollbar{
+   background-color: transparent;
+   width: 8px;
+}
+.scroll-bar::-webkit-scrollbar-thumb{
+   background-color: lightgrey;
+}
+.scroll-bar.transp::-webkit-scrollbar{
+   background-color: transparent;
+   width: 5px;
+}
+.scroll-bar.transp::-webkit-scrollbar-thumb{
+   background-color: #B9B3AD;
+}
 /* PARTE CONVERSAZIONI */
 #bigPic{
   background-color: #F7F9FA;
